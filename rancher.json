@@ -254,9 +254,9 @@
       "Properties": {
         "SecurityGroupIngress": [
           {
-            "ToPort": 80,
+            "ToPort": 443,
             "IpProtocol": "tcp",
-            "FromPort": 80,
+            "FromPort": 443,
             "CidrIp": "0.0.0.0/0"
           }
         ],
