@@ -88,6 +88,10 @@
       "Type": "String",
       "Default": "gp2",
       "Description": "Disk type for RDS"
+    },
+    "SSLCertificateId": {
+      "Type": "String",
+      "Description": "The SSL certificate to use for the ELB"
     }
   },
   "Resources": {
@@ -309,9 +313,10 @@
         "Listeners": [
           {
             "InstancePort": 8080,
-            "LoadBalancerPort": 80,
-            "Protocol": "tcp",
-            "InstanceProtocol": "tcp"
+            "LoadBalancerPort": 443,
+            "Protocol": "https",
+            "InstanceProtocol": "http",
+            "SSLCertificateId": { "Ref": "SSLCertificateId" }
           }
         ],
         "SecurityGroups": [
