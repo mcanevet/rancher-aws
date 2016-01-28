@@ -326,17 +326,13 @@
         ],
         "Policies": [
           {
-            "PolicyName": "EnableProxyProtocol",
-            "InstancePorts": [
-              "8080"
-            ],
-            "PolicyType": "ProxyProtocolPolicyType",
-            "Attributes": [
-              {
-                "Name": "ProxyProtocol",
-                "Value": "true"
-              }
-            ]
+            "PolicyName" : "EnableProxyProtocol",
+            "PolicyType" : "ProxyProtocolPolicyType",
+            "Attributes" : [{
+              "Name"  : "ProxyProtocol",
+              "Value" : "true"
+            }],
+            "InstancePorts" : 8080
           }
         ],
         "HealthCheck": {
